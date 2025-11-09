@@ -1,0 +1,13 @@
+services:
+  minecraftbedrock:
+    build: .
+    container_name: minecraftbedrock
+    ports:
+      - "19132:19132/udp"
+    volumes:
+      - ./server:/data/server
+    environment:
+      - SEED=abc
+    restart: unless-stopped
+    tty: true
+    stdin_open: true

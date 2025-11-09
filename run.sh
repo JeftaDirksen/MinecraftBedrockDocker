@@ -1,7 +1,7 @@
 #!/bin/bash
 
 main () {
-  echo "level-seed=${level_seed}" >> server/server.properties
+  [ -n "$SEED" ] && echo "level-seed=$SEED" >> server/server.properties
 
   # Get current version
   [ -f "server/version" ] && current_version=$(cat "server/version") || current_version=0
