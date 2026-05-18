@@ -9,6 +9,8 @@ services:
     environment:
       - SEED=${SEED:-abc}
     restart: unless-stopped
+    tty: true
+    stdin_open: true
 
 volumes:
   server:
