@@ -19,6 +19,9 @@ main () {
   # Run updater in background
   ./update.sh &
 
+  # Run player check in background
+  ./players-online.sh &
+
   # Starting server
   echo "Starting server..."
   cd server
@@ -50,3 +53,4 @@ update () {
 }
 
 main
+

@@ -5,6 +5,7 @@ VOLUME /data/server
 WORKDIR /data
 COPY --chmod=750 run.sh .
 COPY --chmod=750 update.sh .
+COPY --chmod=750 players-online.sh .
 ENV LD_LIBRARY_PATH=.
 
 # server.properties settings
