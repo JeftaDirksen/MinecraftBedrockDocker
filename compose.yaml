@@ -8,6 +8,8 @@ services:
       - server:/data/server
     environment:
       - SEED=${SEED:-abc}
+      - NVG_URL=${NVG_URL}
+      - NVG_SECRET=${NVG_SECRET}
     restart: unless-stopped
     tty: true
     stdin_open: true
