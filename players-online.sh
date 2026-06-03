@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Online players check started."
-sleep 10
+sleep 30
 while true; do
   echo "Checking online players..."
   screen -S mc -X logfile /tmp/mc_output

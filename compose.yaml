@@ -5,7 +5,7 @@ services:
     ports:
       - "${PORT:-19132}:19132/udp"
     volumes:
-      - server:/data/server
+      - ./server:/data/server
     environment:
       - SEED=${SEED:-abc}
       - NVG_URL=${NVG_URL}
@@ -13,6 +13,3 @@ services:
     restart: unless-stopped
     tty: true
     stdin_open: true
-
-volumes:
-  server:
